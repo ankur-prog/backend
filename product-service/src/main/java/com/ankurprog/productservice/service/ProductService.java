@@ -63,4 +63,12 @@ public class ProductService {
         return false;
 
     }
+
+    public boolean deleteProduct(String id) {
+        if (productRepository.existsById(id)) {
+            productRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }
