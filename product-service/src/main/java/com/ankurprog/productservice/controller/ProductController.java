@@ -87,4 +87,19 @@ public class ProductController {
             return ResponseEntity.notFound().build();
     }
 
-}
+    // 7 . delete product
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteProduct(@PathVariable("id") String id)
+    {
+        Boolean deleteProduct = productService.deleteProduct(id);
+        if(deleteProduct)
+        {
+            return ResponseEntity.ok("Product deleted successfully.");
+        }
+        else
+             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
+    }
+
+    }
+
+
