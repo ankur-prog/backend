@@ -14,7 +14,7 @@
 	<name>product-service</name>
 	<description>Product Service offering </description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 
